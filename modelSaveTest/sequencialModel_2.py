@@ -19,8 +19,14 @@ y_test = (x_test * 2) + 1
 model = keras.models.Sequential()
 print(type(model))
 
-#모델의 구조 정의(인풋 아웃풋이 각각 한개인 노드 추가)
-model.add(keras.layers.Dense(1, input_dim = 1)) #첫번째 인자는 한 레이어의 input 수, input_dim는 단순히 인풋의 차원을 나타내는듯 함(== output의 수). Dense는 input과 output을 모두 연결해주는 NN layer
+#모델의 구조 정의
+model.add(keras.layers.Dense(2, input_dim = 1)) #output 2개, input 1개
+
+#second layer : four node
+model.add(keras.layers.Dense(4))
+
+#output layer : one node
+model.add(keras.layers.Dense(1))
 
 #모델 형태 확인
 model.summary()
