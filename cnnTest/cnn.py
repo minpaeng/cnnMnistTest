@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 
 mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
+mnist = tf.keras.datasets.fashion_mnist
+(x_train, y_train), (x_test, y_test) = mnist.load_data();
 
 #데이터 정규화(0~1값을 갖도록 함)
 x_train = x_train/255.0
